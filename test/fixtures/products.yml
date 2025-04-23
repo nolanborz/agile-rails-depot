@@ -3,11 +3,17 @@
 one:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: sniper.jpg
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: rifle.jpg
   price: 9.99
+
+ruby:
+  title: Pistol
+  description: This .45 caliber handheld gun will put a big gaping hole in anything you shoot it at.
+  price: 19.99
+  image_url: pistol.jpg
