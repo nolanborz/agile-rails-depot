@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Depot" %></title>
+    <title>The Arsenal</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= yield :head %>
 
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/icon.png" type="image/png">
@@ -19,8 +16,25 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+    <header class="bg-purple-700">
+      <%= image_tag 'logo.svg', alt: 'The Arsenal', style: "width: 120px; height: 120px; padding: 10px;" %>
+      <h1><%= @page_title %></h1>
+    </header>
+
+    <section class="flex">
+      <nav class="bg-purple-900 p-6">
+        <ul class="text-gray-300 leading-8">
+          <li><a href="/">Home</a></li>
+          <li><a href="/questions">Questions</a></li>
+          <li><a href="/news"></a>News</li>
+          <li><a href="/contact">Contact</a></li>
+          <li><%= Time.now.strftime("%B %d, %Y") %></li>
+        </ul>
+      </nav>
+
+      <main class="container mx-auto mt-4px-5 flex">
+        <%= yield %>
+      </main>
+    </section>
   </body>
 </html>

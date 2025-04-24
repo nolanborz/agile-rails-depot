@@ -13,24 +13,24 @@ Product.create!(title: 'Grenade',
   description:
     %(<p>
       <em>A tool for any job.</em>
-      A grenade is a handheld bomb thrown by hand or launched mechanically.</p>),
+      A baseball-sized bomb which can be thrown by hand or launched mechanically.</p>),
       image_url: 'grenade.jpg',
       price: 4.99)
 Product.create!(title: 'Rifle',
   description:
   %(<p>
-    <em>A small</em> bomb thrown by hand or launched mechanically.</p>),
+    A dynamic, fully-automatic rifle effective at mid-range distances.</p>),
     image_url: 'rifle.jpg',
-    price: 4.99)
-Product.create!(title: 'Sniper',
-  description:
-  %(<p>
-    <em>A small</em> bomb thrown by hand or launched mechanically.</p>),
-    image_url: 'pistol.jpg',
-    price: 4.99)
+    price: 29.99)
 Product.create!(title: 'Pistol',
   description:
   %(<p>
-    <em>A small</em> bomb thrown by hand or launched mechanically.</p>),
+    A gun which can be handled and shot with one hand, ideal for close quarter combat.</p>),
+    image_url: 'pistol.jpg',
+    price: 19.99)
+Product.create!(title: 'Sniper',
+  description:
+  %(<p>
+    A deadly accurate rifle capable of hitting targets at long ranges.</p>),
     image_url: 'sniper.jpg',
-    price: 4.99)
+    price: 89.99)
