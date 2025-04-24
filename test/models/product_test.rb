@@ -51,4 +51,24 @@ class ProductTest < ActiveSupport::TestCase
         "#{image_url} must be invalid"
     end
   end
+
+  test "product is not valid without a unique title" do
+    product = Product.new(title:  products(:ruby).title,
+                          description: "yyy",
+                          price: 1,
+                          image_url: "fred.gif")
+    assert product.invalid?
+    assert_equal [ "has already been taken" ], product.errors[:title]
+  end
+
+  test "product title length is greater than 4 characters" do
+    product = Product.new(title:  "Gun",
+                          description: "yyy",
+                          price: 1,
+                          image_url: "fred.gif")
+    assert product.invalid?,
+    "product title can't be shorter than 4 characters"
+    product.title = "Bazooka"
+    assert product.valid?
+  end
 end
