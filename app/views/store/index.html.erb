@@ -10,7 +10,7 @@
   </h1>
   <p>
   <% if @session_counter && @session_counter > 5 %>
-    <%= "You have visited the store #{@session_counter} time(s) without buying anything!" %>
+    <%= "You have visited the store #{pluralize(@session_counter, 'time')} without buying anything!" %>
   <% end %>
   </p>
   <ul>
