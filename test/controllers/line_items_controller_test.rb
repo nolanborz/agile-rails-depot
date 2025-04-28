@@ -22,7 +22,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
 
     assert_select "h2", "Your Weapons Cart"
     assert_select "h2", "Your Weapons Cart" do
-      assert_select "~ ul li", "Pistol"
+      assert_select "~ ul li", "1 \u00D7 Pistol"
     end
   end
 
