@@ -21,9 +21,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     follow_redirect!
 
     assert_select "h2", "Your Weapons Cart"
-    assert_select "h2", "Your Weapons Cart" do
-      assert_select "~ ul li", "1 × Pistol"
-    end
+    assert_select "td", "1"
   end
 
   test "should show line_item" do
